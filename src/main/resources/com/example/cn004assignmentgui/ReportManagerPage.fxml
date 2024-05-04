@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cn004assignmentgui.ReportManagerController">
+    <children>
+          <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;">
+              <children>
+                  <ImageView fitHeight="40.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@images/UEL.png" />
+                      </image>
+                      <VBox.margin>
+                          <Insets bottom="10.0" top="50.0" />
+                      </VBox.margin>
+                  </ImageView>
+                  <Label text="UEL" textFill="#e7e5e5">
+                      <VBox.margin>
+                          <Insets bottom="20.0" />
+                      </VBox.margin>
+                  </Label>
+
+                  <Button fx:id="HomePageMenu" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToNewPage" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Report Creation">
+                      <graphic>
+                          <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@images/3709751_complaint_dissatisfaction_expression_feedback_report_icon.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                      <padding>
+                          <Insets left="50.0" />
+                      </padding>
+                  </Button>
+                  <Button fx:id="ReportPageMenu" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#RefreshPage" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Report Manager">
+                      <graphic>
+                          <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@images/8541623_book_reader_icon-2.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                      <padding>
+                          <Insets left="50.0" />
+                      </padding>
+                  </Button>
+              </children>
+          </VBox>
+      <BorderPane fx:id="MainBorderPaneReport" layoutX="258.0">
+         <center>
+              <StackPane fx:id="StackPaneReportPage" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+                  <children>
+
+
+                      <Pane fx:id="Content" prefHeight="420.0" prefWidth="793.0">
+                          <Label layoutX="57.0" layoutY="25.0" text="Emergency System" textFill="#e7e5e5">
+                              <font>
+                                  <Font size="24.0" />
+                              </font>
+                          </Label>
+                          <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                              <children>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                      <children>
+                                          <Label fx:id="lblReportCount" textFill="#2a73ff">
+                                              <font>
+                                                  <Font name="System Bold" size="26.0" />
+                                              </font>
+                                          </Label>
+                                          <Label text="Total Report" textFill="#e7e5e5" />
+                                      </children>
+                                  </VBox>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                      <children>
+                                          <Label fx:id="lblCaseSolved" textFill="#26bfbc">
+                                              <font>
+                                                  <Font name="System Bold" size="26.0" />
+                                              </font>
+                                          </Label>
+                                          <Label text="Case Solved" textFill="#e7e5e5" />
+                                      </children>
+                                  </VBox>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                              </children>
+                          </HBox>
+                          <ScrollPane fx:id="fileScrollPane" layoutX="41.0" layoutY="180.0" prefHeight="374.0" prefWidth="712.0" style="-fx-background-color: #02030A;" stylesheets="@style.css">
+                              <VBox fx:id="fileVBox" spacing="20" stylesheets="@style.css">
+
+                        </VBox>
+                          </ScrollPane>
+                      </Pane>
+
+                  </children>
+              </StackPane>
+         </center>
+      </BorderPane>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>

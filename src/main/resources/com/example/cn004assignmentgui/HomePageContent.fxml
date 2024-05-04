@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cn004assignmentgui.HomePageController">
+    <Pane fx:id="HomeContent" prefHeight="569.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+        <Label layoutX="57.0" layoutY="25.0" text="Emergency System" textFill="#e7e5e5">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="lblReportCount" textFill="#2a73ff">
+                            <font>
+                                <Font name="System Bold" size="26.0" />
+                            </font>
+                        </Label>
+                        <Label text="Total Report" textFill="#e7e5e5" />
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="lblCaseSolved" textFill="#26bfbc">
+                            <font>
+                                <Font name="System Bold" size="26.0" />
+                            </font>
+                        </Label>
+                        <Label text="Case Solved" textFill="#e7e5e5" />
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            </children>
+        </HBox>
+        <VBox layoutX="58.0" layoutY="180.0" spacing="20">
+            <Label text="Select Number of Services" textFill="#e7e5e5" />
+            <ChoiceBox fx:id="serviceChoice" prefWidth="150.0" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1" />
+                        <String fx:value="2" />
+                        <String fx:value="3" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <HBox spacing="10">
+                <CheckBox fx:id="chkPolice" text="Police" textFill="#e7e5e5" />
+                <CheckBox fx:id="chkAmbulance" text="Ambulance" textFill="#e7e5e5" />
+                <CheckBox fx:id="chkFireBrigade" text="Fire Brigade" textFill="#e7e5e5" />
+            </HBox>
+        </VBox>
+        <GridPane hgap="10" layoutX="58.0" layoutY="310.0" vgap="20">
+            <TextField fx:id="txtName" promptText="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtLastName" promptText="Surname" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="txtAddress" promptText="Address" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPhoneNumber" promptText="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="txtProblemDescription" prefHeight="100" prefWidth="200" promptText="Problem Description" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <Button layoutX="58.0" layoutY="530.0" onAction="#handleSubmit" text="Submit" />
+        <Label fx:id="lblError" layoutX="200.0" layoutY="530.0" textFill="#e7e5e5" />
+
+
+    </Pane>
+
+</AnchorPane>
