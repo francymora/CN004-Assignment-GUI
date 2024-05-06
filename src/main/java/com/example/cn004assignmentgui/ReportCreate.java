@@ -16,7 +16,7 @@ public class ReportCreate {
     }
 
     public static void generateNextReport(String reportDescription) {
-        CreateFolder();
+
         File folder = new File("report");
         File[] files = folder.listFiles();
 
