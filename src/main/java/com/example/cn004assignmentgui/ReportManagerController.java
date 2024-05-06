@@ -234,19 +234,9 @@ public class ReportManagerController implements Initializable {
     }
 
 
+
     @FXML
     private void goToHomePage(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            Parent homePage = loader.load();
-            StackPaneReportPage.getChildren().clear();
-            StackPaneReportPage.getChildren().add(homePage);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    @FXML
-    private void goToNewPage(ActionEvent event) {
         // Load the content of the new page from an FXML file or create the content programmatically
         Pane newContent = loadContent("HomePageContent.fxml");
 

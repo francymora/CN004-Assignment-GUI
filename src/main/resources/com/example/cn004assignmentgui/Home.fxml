@@ -91,7 +91,7 @@
                               </children>
                           </HBox>
                           <VBox layoutX="58.0" layoutY="180.0" spacing="20">
-                              <Label text="Select Number of Services" textFill="#e7e5e5" />
+                              <Label text="Select Number of Services (before to choose which service do you need)" textFill="#ffff" />
                               <ChoiceBox fx:id="serviceChoice" prefWidth="150.0" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;">
                                   <items>
                                       <FXCollections fx:factory="observableArrayList">
